@@ -3,13 +3,15 @@ import google.generativeai as genai
 import random
 import string
 import os
+from pytube import extract
 
 
 GOOGLE_API_KEY = os.environ['API_KEY']
 genai.configure(api_key=GOOGLE_API_KEY)
 
+
 def get_video_id(url):
-    id = url[-11::]
+    id = extract.video_id(url)
     return id
 
 def get_transcript(id):
