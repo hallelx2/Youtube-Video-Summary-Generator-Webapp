@@ -4,6 +4,8 @@
 
 **Description:**
 
+**Demo Link:** [Youtube Summarizer](https://youtubevideosum.streamlit.app/)
+
 This Streamlit web app helps you quickly summarize YouTube videos by analyzing their transcripts using Google Generative AI. 
 
 **Features:**
