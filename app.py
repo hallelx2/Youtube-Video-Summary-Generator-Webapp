@@ -8,11 +8,12 @@ st.title('Youtube Transcript Web App')
 def main():
     link = st.text_input('Input the link to the youtube video')
     if link:
-        id = get_video_id(link)
-        transcript = get_transcript(id)
-        response = get_video_summary(transcript)
-        st.write('# Here is the Concise summary of the video on the youtube platform')
-        st.write(response)
+        if st.button('Get Summary'):
+            id = get_video_id(link)
+            transcript = get_transcript(id)
+            response = get_video_summary(transcript)
+            st.write('# Here is the Concise summary of the video on the youtube platform')
+            st.write(response)
     else:
         st.write('You need to provide the link to the youtube video')
 
